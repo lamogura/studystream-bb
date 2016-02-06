@@ -1,0 +1,29 @@
+/ TODO: clean up template code
+- if @state is "showingOptions"
+	.btn.card-options
+		.btn.star-button
+			%i.icon-star-empty
+		.btn.bury-button
+			%i.icon-arrow-down
+		.btn.edit-button
+			%i.icon-edit
+		.btn.btn-danger.delete-button
+			%i.icon-trash.icon-white
+- else
+	.btn.flashcard
+		.entry= @entry
+		- if @state is "testingReading"
+			.reading= @reading
+		- if @state is "testingDefn"
+			.defn= @defn
+		- if @state is "testingReading" or @state is "testingDefn"
+			.choices
+				.btn.btn-danger.choice.choice-incorrect
+					%i.icon-remove.icon-white
+				.btn.btn-success.choice.choice-correct
+					%i.icon-ok.icon-white
+		- if @state is "testedAndDisplaying"
+			.reading= @reading
+			.defn= @defn
+		- if @debug
+			.debug #{@reading_score} #{@defn_score} #{@score}

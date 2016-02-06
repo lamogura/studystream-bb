@@ -1,0 +1,11 @@
+.edit-flashcard.btn.flashcard
+	.edit-card-frame
+		.text-fields
+			%input.card-entry.text-field(type="text" name="entry" size="30" placeholder="entry" value="#{@entry}")
+			%input.card-reading.text-field(type="text" name="reading" size="30" placeholder="reading" value="#{@reading}")
+			%input.card-defn.text-field(type="text" name="defn" size="30" placeholder="defn" value="#{@defn}")
+		.form-buttons
+			.cancel-button.btn.btn-danger
+				%i.icon-remove.icon-white
+			.save-button.btn.btn-primary
+				%i.icon-ok.icon-white
